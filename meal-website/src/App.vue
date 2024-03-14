@@ -7,6 +7,7 @@
   <our-menu></our-menu>
   <other-services></other-services>
   <reservation></reservation>
+  <reviews></reviews>
 </template>
 <script>
 import Navbar from './components/Navbar.vue'
@@ -17,6 +18,7 @@ import Chefs from './components/Meet-The-Chefs.vue';
 import Menu from './components/Our-Menu.vue';
 import OtherServices from './components/Other-Services.vue';
 import Reservation from './components/Reservation.vue';
+import CustomerReviews from './components/Customer-Reviews.vue';
 export default {
   components: {
     'navbar': Navbar,
@@ -26,7 +28,8 @@ export default {
     'chefs': Chefs,
     'our-menu': Menu,
     'other-services': OtherServices,
-    'reservation': Reservation
+    'reservation': Reservation,
+    'reviews': CustomerReviews
   }
 }
 </script>
