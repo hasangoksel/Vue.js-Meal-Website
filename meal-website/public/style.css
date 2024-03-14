@@ -430,7 +430,7 @@ header{
 .brunch{
     margin-top: 3%;
     width: 55%;
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;  
@@ -438,7 +438,7 @@ header{
 .dinner{
     margin-top: 3%;
     width: 55%;
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
