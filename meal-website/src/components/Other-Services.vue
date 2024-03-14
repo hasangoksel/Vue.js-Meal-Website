@@ -1,5 +1,5 @@
 <template>
- <div class="other-services">
+ <div ref="otherService" class="other-services">
         <div class="other-services-title">
             <h2>Other Services</h2>
             <p>Free Website Template For Restaurants Made by Goksel</p>
@@ -19,6 +19,25 @@
 
 <script>
 export default{
+    mounted() {
+        const options = {
+            root: null, // viewport'u gözlemle
+            rootMargin: '0px', // viewport kenarlarından ne kadar uzakta başlatılacağı
+            threshold: 0.0001 // ne kadar oranında görünürse gözleme başlayacak
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    // Element görünür hale geldiğinde animasyon sınıfını ekleyin
+                    this.$refs.otherService.classList.add('fadeInAnimation');
+                    observer.unobserve(entry.target); // Gözlemi durdur
+                }
+            });
+        }, options);
+
+        // Gözlemleyiciyi ilgili bölüm üzerinde başlat
+        observer.observe(this.$refs.otherService);
+    },
     data(){
         return{
             services: {
@@ -57,3 +76,8 @@ export default{
     }
 }
 </script>
+<style scoped>
+.fadeInAnimation {
+  animation: fadeInLeft 2.3s ease-in-out 1;
+}
+</style>

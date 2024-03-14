@@ -1,5 +1,5 @@
 <template>
-    <div id="our-menu" class="menu">
+    <div ref="ourMenu" id="our-menu" class="menu">
         <div class="menu-title">
             <h2>Menu</h2>
             <p>Free Website Template For Restaurants Made by Goksel</p>
@@ -61,6 +61,25 @@
 </template>
 <script>
 export default{
+    mounted() {
+        const options = {
+            root: null, // viewport'u gözlemle
+            rootMargin: '0px', // viewport kenarlarından ne kadar uzakta başlatılacağı
+            threshold: 0.0001 // ne kadar oranında görünürse gözleme başlayacak
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    // Element görünür hale geldiğinde animasyon sınıfını ekleyin
+                    this.$refs.ourMenu.classList.add('fadeInAnimation');
+                    observer.unobserve(entry.target); // Gözlemi durdur
+                }
+            });
+        }, options);
+
+        // Gözlemleyiciyi ilgili bölüm üzerinde başlat
+        observer.observe(this.$refs.ourMenu);
+    },
     data(){
         return{
             isBreakfast: true,
@@ -166,3 +185,9 @@ export default{
     }
 }
 </script>
+
+<style scoped>
+.fadeInAnimation {
+  animation: fadeInRight 2.3s ease-in-out 1;
+}
+</style>

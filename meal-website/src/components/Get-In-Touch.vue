@@ -3,7 +3,7 @@
         <div class="get-in-touch-title">
             <h2>Get In Touch</h2>
         </div>
-        <form class="get-in-touch-form">
+        <form ref="touch" class="get-in-touch-form">
             <div class="form-group">
                 <label for="get-name">Name</label>
                 <div class="form-input-group">
@@ -38,3 +38,29 @@
         </form>
     </div>
 </template>
+<script>
+export default{
+    mounted() {
+        const options = {
+            root: null,
+            rootMargin: '0px', 
+            threshold: 0.0001 
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    this.$refs.touch.classList.add('fadeInAnimation');
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, options);
+
+        observer.observe(this.$refs.touch);
+    },
+}
+</script>
+<style scoped>
+.fadeInAnimation {
+  animation: fadeInScale 2.3s ease-in-out 1;
+}
+</style>

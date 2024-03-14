@@ -1,5 +1,5 @@
 <template>
-     <div class="best-food">
+     <div ref="bestFood" class="best-food">
         <div class="best-food-title">
             <h2>Find your best food</h2>
             <p>Free Website Template For Restaurants Made by Goksel</p>
@@ -52,3 +52,34 @@
         </div>
     </div>
 </template>
+<script>
+export default {
+  mounted() {
+    const options = {
+      root: null, // viewport'u gözlemle
+      rootMargin: '0px', // viewport kenarlarından ne kadar uzakta başlatılacağı
+      threshold: 0.0001 // ne kadar oranında görünürse gözleme başlayacak
+    };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Element görünür hale geldiğinde animasyon sınıfını ekleyin
+          this.$refs.bestFood.classList.add('fadeInAnimation');
+          observer.unobserve(entry.target); // Gözlemi durdur
+        }
+      });
+    }, options);
+
+    // Gözlemleyiciyi ilgili bölüm üzerinde başlat
+    observer.observe(this.$refs.bestFood);
+  }
+};
+</script>
+
+<style scoped>
+.fadeInAnimation {
+  animation: fadeInBottom 2.3s ease-in-out 1;
+}
+
+
+</style>
