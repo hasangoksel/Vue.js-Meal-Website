@@ -8,6 +8,8 @@
   <other-services></other-services>
   <reservation></reservation>
   <reviews></reviews>
+  <get-in-touch></get-in-touch>
+  <app-footer></app-footer>
 </template>
 <script>
 import Navbar from './components/Navbar.vue'
@@ -19,6 +21,8 @@ import Menu from './components/Our-Menu.vue';
 import OtherServices from './components/Other-Services.vue';
 import Reservation from './components/Reservation.vue';
 import CustomerReviews from './components/Customer-Reviews.vue';
+import GetInTouch from './components/Get-In-Touch.vue';
+import Footer from './components/Footer.vue';
 export default {
   components: {
     'navbar': Navbar,
@@ -29,7 +33,9 @@ export default {
     'our-menu': Menu,
     'other-services': OtherServices,
     'reservation': Reservation,
-    'reviews': CustomerReviews
+    'reviews': CustomerReviews,
+    'get-in-touch': GetInTouch,
+    'app-footer': Footer
   }
 }
 </script>
