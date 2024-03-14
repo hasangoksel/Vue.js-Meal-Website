@@ -1,0 +1,899 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+  }
+
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2%;
+    z-index: 10;
+}
+nav.scrolled {
+    background-color: #f8f9fa;
+    color: #000;
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav-logo{
+    flex-basis: 97%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-logo a{
+    border: 1.5px solid #000;
+    color: #000;
+    padding: 0.4% 1%;
+    text-decoration: none ;
+    font-weight: 600;
+    font-size: 2rem;
+    transition: all .3s ease;
+}
+.logo.scroll{
+    background-color: #000;
+    color: #fff;
+}
+.nav-logo a:hover{
+    background-color: #000;
+    color: #fff;
+    transition: all 0.4s ease-in-out;
+}
+.hamburger{
+    flex-basis: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+}
+.hamburger-item{
+    background-color: #000;
+    margin-top: .3rem;
+    width: 1.4rem;
+    height: .2rem;
+    border-radius: 1.3px;
+    transition: margin-top .2s ease-in;
+}
+
+.hamburger:hover .hamburger-item{
+    margin-top: .5rem;
+}
+
+
+header{
+    background-image: url(./img/welcome-tomeal.webp);
+    background-repeat: no-repeat;
+    background-position: unset; 
+    background-size: cover;   
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-content{
+    margin-left: 3%;
+    text-align: center;
+}
+
+.header-content h1{
+    color: #fff;
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 3%;
+    text-shadow: 1px 1px grey;
+}
+
+.header-content a{
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    padding: 1.7% 5%;
+}
+
+.header-content a:hover{
+    background-color: #fff;
+    color: #000000;
+    transition: all 0.4s ease-in-out;
+}
+
+
+
+/* ! Find your best food  */
+.best-food{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10%;
+    background: #f8f9fa;
+}
+.best-food-title{
+    text-align: center;
+    padding: 5%;
+}
+.best-food-title h2{
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin-bottom: 1%;
+}
+.best-food-title p{
+    font-size: 1.2rem;
+    opacity: 0.6;
+}
+
+.best-food-content{
+    flex-basis: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.best-food-content img{
+    width: 350px;
+    height: 350px;
+}
+.tri-left{
+    border-right:25px solid rgb(255, 255, 255);
+    border-top:25px solid transparent;
+    border-bottom:25px solid transparent;
+    margin-top:4.5rem;
+}
+.card-img-1{
+    background-image: url(./img/find-your-best-food-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 350px;
+    height: 350px;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.tri-right{
+    border-left:25px solid rgb(255, 255, 255);
+    border-top:25px solid transparent;
+    border-bottom:25px solid transparent;
+    margin-top: 4.5rem;
+}
+.card-img-2{
+    background-image: url(./img/find-your-best-food-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 350px;
+    height: 350px;
+}
+.tri-top{
+    border-bottom:25px solid rgb(255, 255, 255);
+    border-left:25px solid transparent;
+    border-right:25px solid transparent;
+}
+.card-img-3{
+    background-image: url(./img/find-your-best-food-3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.two-card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card-type-h{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: #fff;
+}
+.card-type-v{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: #fff;
+
+}
+.card-content{
+    text-align: center;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4%;
+}
+.card-content h3,h4,p{
+    margin-bottom: 8%;
+}
+.card-content h3{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.card-content h4{
+    color: orangered;
+    margin-top: 10%;
+    font-size: 1.08rem;
+    font-weight: 400;
+    letter-spacing: .1rem;
+}
+.card-content p{
+    font-size: 1.2rem;
+    opacity: .6;
+}
+.card-content a{
+    margin-top: 15%;
+    text-decoration: none;
+    color: #000;
+    opacity: 0.5;
+    text-transform: uppercase;
+    font-size: .8rem;
+    transition: opacity .3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-content a:hover{
+    opacity: 1;
+}
+.card-content a i{
+    margin-top: .03rem;
+    margin-left: 0.4rem;
+}
+
+
+
+/* ! The Restaurant */
+.the-restaurant{
+    padding: 5% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.the-restaurant-content{
+    width: 50%;
+    margin-top: 6%;
+}
+.the-restaurant-content h2{
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+.the-restaurant-content p{
+    margin-top: 2%;
+    font-size: 1.3em;
+    font-weight: 400;
+    opacity: .6;
+}
+.the-restaurant-image img{
+    width: 100%;
+    height: auto;
+}
+
+
+/* ! Meet the chefs */
+.meet-the-chefs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 0;
+}
+.meet-the-chefs h2{
+    text-align: center;
+    font-size: 2.6rem;
+    font-weight: 400;
+    padding: 2%;
+}
+.meet-the-chefs-cards{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.card-chef{
+    flex-basis: 35%;
+    padding: 2% ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.card-chef img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+.card-chef h3{
+    font-size: 2rem;
+    font-weight: 400;
+    margin-top: 3%;
+}
+.card-chef h4{
+    margin-top: 2%;
+    font-size: 1.4rem;
+    font-weight: 300;
+    opacity: .6;
+    text-transform: uppercase;
+}
+.card-chef p{
+    opacity: .6;
+    font-size: 1.2rem;
+}
+.social-media{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.social-media i{
+    margin: 10px;
+    font-size: 1.4rem;
+    color: orangered;
+    opacity: .7;
+    transition: opacity .4s ease-in-out;
+}
+.social-media i:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+
+/* ! Menu */
+.menu{
+    background-color: #f8f9fa;
+    padding: 5% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.menu-title{
+    text-align: center;
+    margin-top: 6%;
+}
+.menu-title h2{
+    font-size: 2.6rem;
+    font-weight: 300;
+}
+.menu-title p{
+    margin-top: 2%;
+    opacity: .6;
+    font-size: 1.4rem;
+}
+.menu-nav{
+    margin-top: 2%;
+    width: 50%;
+    color: orangered;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.menu-nav-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.menu-nav-item span{
+    font-size: 1.3rem;
+}
+
+.menu-nav-item > .line{
+    margin-top: 12px;
+    width: 110%;
+    height: 3px;
+    background-color: #ddd;
+    border-radius: 2px;
+    transition: background-color .4s ease;
+}
+
+.menu-nav-item:hover > .line{
+    background-color: orangered;
+}
+.menu-nav-item > .menu-nav-item-active{
+    background-color: orangered;
+}
+
+.breakfast, .dinner{
+    margin-top: 3%;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.brunch{
+    margin-top: 3%;
+    width: 55%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+.dinner{
+    margin-top: 3%;
+    width: 55%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.menu-card{
+    margin-bottom: 1%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.menu-card img{
+    width: 125px;
+    height: 125px;
+    border-radius: 10px;
+}
+.menu-card-content{
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: flex-start;
+}
+.menu-card-content h3{
+    font-size: 1.4rem;
+    font-weight: 400;
+    opacity: .9;
+    letter-spacing: .2px;
+    transition: opacity .3s ease-in;
+}
+.menu-card-content h3:hover{
+    cursor: pointer;
+    opacity: .4;
+}
+.menu-card-content p{
+    font-size: 1.1rem;
+    opacity: .5;
+    margin-top: 1%;
+}
+.price{
+    color: orangered;
+    font-size: 1.1rem;
+}
+.menu-card-line{
+    margin: 2%;
+    width: 93%;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #000;
+    opacity: .1;
+}
+
+/* ! Other Services */
+
+.other-services{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.other-services-title{
+    text-align: center;
+    padding: 7%;
+}
+.other-services-title h2{
+    font-size: 2rem;
+    font-weight: 400;
+}
+.other-services-title p{
+    margin-top: 2%;
+    font-size: 1.2rem;
+    opacity: .6;
+}
+.other-services-card-container{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.other-services-card{
+    flex-basis: 29%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 4%;
+}
+.other-services-card img{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 3%;
+}
+.other-services-card h3{
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
+.other-services-card p{
+    font-size: 1.1rem;
+    font-weight: 300;
+    opacity: .6;
+}
+
+
+/* ! Reservation */
+
+.reservation{
+    background-color: #f8f9fa;
+    padding: 5% 0;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.reservation-title{
+    text-align: center;
+    width: 70%; 
+    margin-top: 6%;
+}
+.reservation-title h2{
+    font-size: 2.4rem;
+    font-weight: 400;
+}
+.reservation-title p{
+    margin-top: 2%;
+    font-size: 1.3rem;
+    opacity: .6;
+}
+.reservation-form{
+    width: 60%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 3%;
+}
+
+.form-group{
+    flex-basis: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4%;
+}
+.form-group label{
+    margin-bottom: 2.4%;
+    width: 70%;
+    text-align: left;
+}
+.form-input-group{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid #9a9999;
+    border-radius: 3px;
+}
+.form-input-group input{
+    border: none;
+    width: 85%;
+    height: 30px;
+    padding-left: 2%;
+    transition: border-color 0.3s ease;
+}
+
+.form-input-group input:focus{
+    outline: none;
+}
+.form-input-group i{
+    margin-right: 2.4%;
+    opacity: .6;
+    font-size: .8rem;
+}
+
+.form-input-group select{
+    border: none;
+    width: 179px;
+    height: 30px;
+    padding: 0 3% 0 3%;
+}
+.form-input-group select:focus{
+    outline: none;
+}
+.form-input-group input[type='date']{
+    border: none;
+    width: 179px;
+    height: 30px;
+    padding: 0 3% 0 3%;
+}
+.form-input-group input[type='time']{
+    border: none;
+    width: 179px;
+    height: 30px;
+    padding: 0 3% 0 3%;
+}
+.form-group button{
+    width: 195px;
+    padding: 4%;
+    background-color: #fff;
+    border: 1px solid orangered;
+    color: orangered;
+    border-radius: 5px;
+    font-size: .8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    transition: all .45s ease;
+}
+.form-group button:hover{
+    cursor: pointer;
+    background-color: orangered;
+    border: 1px solid orangered;
+    color: #000;
+}
+.form-input-group:focus-within {
+    border-color: orangered;
+}
+.form-input-group:hover{
+    border-color: orangered;
+}
+
+
+/* ! Customer Reviews */
+
+.customer-reviews{
+    margin: 4% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.customer-reviews-title h2{
+    font-size: 2.8rem;
+    font-weight: 500;
+    padding: 7% 0;
+}
+
+.review{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.review p{
+    margin-bottom: 0;
+    margin-top: 5%;
+    text-align: center;
+    width: 80%;
+    margin-bottom: 4%;
+}
+.review img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 1%;
+}
+.review h3{
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+.review h4{
+    font-size: 1.1rem;
+    font-size: .9rem;
+}
+.customer-reviews-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.customer-reviews-item{
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    margin:5px;
+    background-color: orangered;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.customer-reviews-item:hover{
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+}
+.customer-reviews-item-active{
+    height: 12px;
+    width: 12px;
+}
+
+.review-one{
+    display: flex;
+}
+.review-two{
+    display: none;
+}
+.review-three{
+    display: none;
+}
+
+/* ! Get in touch */
+
+.get-in-touch{
+    padding: 5% 0;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.get-in-touch-title{
+    margin-bottom: 3%;
+}
+.get-in-touch-title h2{
+    font-size: 2.8rem;
+    font-weight: 500;
+    padding: 7% 0;
+}
+.get-in-touch-form{
+    width: 60%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 3%;
+}
+.form-group-textarea{
+    flex-basis: 89%;
+    margin-bottom: 4%;
+}
+
+.form-input-group textarea:focus{
+    outline: none;
+}
+textarea{
+    border: none;
+    padding: 2%;
+}
+.form-input-group{
+    margin-top: 2%;
+}
+
+/* ! Footer */
+
+footer{
+    padding: 5% 0;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-left: 7%;
+}
+.about-meal{
+    flex-basis: 30%;
+    margin-left: 2%;
+}
+.about-meal h2{
+    font-size: 1.4rem;
+    margin-bottom: 2%;
+    font-weight: 600;
+}
+.about-meal p{
+    width: 80%;
+    opacity: .6;
+}
+.about-meal a{
+    border: 1.4px solid orangered;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: .12px;
+    font-size: 1.03rem;
+    font-weight: 600;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: orangered;
+    transition: all .4s ease;
+}
+.about-meal a:hover{
+    background-color: orangered;    
+    color: #000;
+}
+.working-hours{
+    flex-basis: 30%;
+    margin-left: 2%;
+}
+.working-hours h2{
+    font-size: 1.4rem;
+    margin-bottom: 2%;
+    font-weight: 600;
+}
+.working-hours p{
+    width: 80%;
+    opacity: .6;
+}
+.contact{
+    flex-basis: 30%;
+    margin-left: 2%;
+}
+.contact-title-two{
+    margin-top: 5%;
+}
+.contact h2{
+    font-size: 1.4rem;
+    margin-bottom: 2%;
+    font-weight: 600;
+}
+.follow-along{
+    margin-bottom: 2%;
+}
+.follow-along i{
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: 4px;
+    transition: color .4s ease;
+}
+.follow-along i:hover{
+    color: orangered;
+}
+.newsletter{
+    background-color: #fff;
+    width: 60%;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
+.newsletter input{
+    flex-basis: 85%;
+    border: none;
+    height: 35px;
+    padding: 3%;
+    border-radius: 5px;
+}
+.newsletter input:focus{
+    outline: none;
+}
+.newsletter i{
+    cursor: pointer;
+    margin-right: 5%;
+}
+.signature{
+    flex-basis: 50%;
+    margin-top: 2%;
+    text-align: left;
+}
+.signature p{
+    margin: 0;
+    padding: 0;
+    margin-top: 3%;
+}
